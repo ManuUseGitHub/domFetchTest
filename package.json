@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "@maze014/dom-fetch": "^1.0.0"
-  },
   "devDependencies": {
     "vitest": "^4.0.16"
+  },
+  "dependencies": {
+    "@maze014/dom-fetch": "^1.1.0"
   }
 }

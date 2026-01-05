@@ -1,5 +1,5 @@
 import { selectElements } from "@maze014/dom-fetch";
-import { unlink, writeFileSync } from "fs";
+import { readFileSync, unlink, writeFileSync } from "fs";
 import { describe, it, expect, afterAll } from "vitest";
 describe("succeeding", () => {
 	it("can fetch html from url", async () => {
@@ -20,6 +20,15 @@ describe("succeeding", () => {
 			source: "file",
 		});
 		expect(data.length).toBe(22);
+	});
+
+	it("can fetch from string", async () => {
+		const html = readFileSync("./tests/helloWorld.html");
+		const data = await selectElements(html, "body > *", {
+			output: "html",
+			source: "string",
+		});
+		expect(data.length).toBe(4);
 	});
 
 	it.each([
@@ -87,6 +96,7 @@ describe("failings", () => {
 		["source option not supported", "breakdown", "fake", "./tests/nodeJS.html"],
 		["source option not supported", "fake", "fake", "./tests/nodeJS.html"],
 		["source option not supported", "", "", "./tests/nodeJS.html"],
+		["no content read", "html", "string", null],
 		["Failed to parse URL", "html", "url", "./tests/nodeJS.html"],
 		[
 			"no such file",
