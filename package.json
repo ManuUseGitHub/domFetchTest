@@ -1,0 +1,19 @@
+{
+  "name": "domfetchtest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "mantest": "node ./test3.mjs > paragraphs.html",
+    "test": "vitest"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dom-fetch": "file:../Projects/corsanwr"
+  },
+  "devDependencies": {
+    "vitest": "^4.0.16"
+  }
+}
