@@ -1,4 +1,4 @@
-import { selectElements } from "dom-fetch";
+import { selectElements } from "@maze014/dom-fetch";
 import { unlink, writeFileSync } from "fs";
 import { describe, it, expect, afterAll } from "vitest";
 describe("succeeding", () => {

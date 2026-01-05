@@ -1,9 +1,9 @@
 # DomFetchTest
 
-DomFetchTest is a small test suite designed to validate and demonstrate the behavior of the **dom-fetch** npm package.  
+DomFetchTest is a small test suite designed to validate and demonstrate the behavior of the **@maze014/dom-fetch** npm package.  
 It focuses on verifying how HTML can be fetched and parsed from both URLs and local files, and how different output formats behave.
 
-This repository is intended as a companion test project for **dom-fetch**, not as a replacement for its documentation.
+This repository is intended as a companion test project for **@maze014/dom-fetch**, not as a replacement for its documentation.
 
 ---
 
@@ -11,7 +11,7 @@ This repository is intended as a companion test project for **dom-fetch**, not a
 
 The goal of this project is to:
 
-- Ensure `dom-fetch` can fetch and parse HTML from **URLs** and **local files**
+- Ensure `@maze014/dom-fetch` can fetch and parse HTML from **URLs** and **local files**
 - Validate supported `output` formats
 - Validate supported `source` options
 - Confirm correct error handling for unsupported or invalid configurations
@@ -42,7 +42,7 @@ $ npm run test
 
 ## Test Overview
 
-The tests focus on the `selectElements` function exported by `dom-fetch`:
+The tests focus on the `selectElements` function exported by `@maze014/dom-fetch`:
 
 ```ts
 selectElements(source, selector, options?)
@@ -134,11 +134,11 @@ These files are automatically cleaned up after all tests complete.
 
 - **Vitest** – Test runner
 - **Node.js fs module** – Temporary file handling
-- **dom-fetch** – HTML fetching and DOM selection
+- **@maze014/dom-fetch** – HTML fetching and DOM selection
 
 ---
 
 ## License
 
 This project is provided for testing and demonstration purposes only.  
-Refer to the **dom-fetch** package for its licensing information.
+Refer to the **@maze014/dom-fetch** package for its licensing information.
