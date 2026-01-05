@@ -11,7 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "dom-fetch": "file:../Projects/corsanwr"
+    "dom-fetch": "^1.0.0"
   },
   "devDependencies": {
     "vitest": "^4.0.16"
