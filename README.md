@@ -107,6 +107,21 @@ const data = await selectElements(
 );
 ```
 
+### specs (✓ succeeding (12))
+✓ can fetch html from url  423ms
+✓ can fetch from file 114ms
+✓ can fetch from string 9ms
+✓ object can fetch elements of object 7ms
+✓ children can fetch elements of string 7ms
+✓ html can fetch elements of string 6ms
+✓ breakdown can fetch elements of object 12ms
+✓ can fetch the target element elements via the 'breackdown' output option 6ms
+✓ can fetch the targeted tags via the 'breackdown' output option 13ms
+✓ can fetch text from all same elements via the' breackdown' output option 12ms
+✓ can fetch from an url because with :: no source option defined falls back to 'url' 157ms
+✓ can fetch from SPA with headless server  3548ms
+
+
 ---
 
 ## Failing Test Cases
@@ -120,6 +135,45 @@ The test suite also ensures proper error handling when:
 - A local file does not exist
 
 Each failing case is expected to throw a meaningful error message.
+
+### specs (✓ failings (13))
+✓ cannot fetch because :: output option not supported with config [output:fake, source:file]
+against (./tests/nodeJS.html) 79ms
+✓ cannot fetch because :: output option not supported with config [output:, source:file]
+against (./tests/nodeJS.html)
+ 102ms
+✓ cannot fetch because :: output option not supported with config [output:HTML, source:file]against (./tests/nodeJS.html)
+ 69ms
+✓ cannot fetch because :: output option not supported with config [output:fake, source:url]
+against (https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
+ 144ms
+✓ cannot fetch because :: source option not supported with config [output:html, source:fake]
+against (./tests/nodeJS.html)
+ 0ms
+✓ cannot fetch because :: source option not supported with config [output:children, source:fake]
+against (./tests/nodeJS.html)
+ 0ms
+✓ cannot fetch because :: source option not supported with config [output:object, source:fake]
+against (./tests/nodeJS.html)
+ 0ms
+✓ cannot fetch because :: source option not supported with config [output:breakdown, source:fake]
+against (./tests/nodeJS.html)
+ 0ms
+✓ cannot fetch because :: source option not supported with config [output:fake, source:fake]
+against (./tests/nodeJS.html)
+ 0ms
+✓ cannot fetch because :: source option not supported with config [output:, source:]
+against (./tests/nodeJS.html)
+ 0ms
+✓ cannot fetch because :: no content read with config [output:html, source:string]
+against (null)
+ 0ms
+✓ cannot fetch because :: Failed to parse URL with config [output:html, source:url]
+against (./tests/nodeJS.html)
+ 0ms
+✓ cannot fetch because :: no such file with config [output:html, source:file]
+against (https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
+ 0ms
 
 ---
 

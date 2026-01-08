@@ -78,6 +78,15 @@ describe("succeeding", () => {
 		);
 		expect(data.length).toBe(22);
 	});
+
+	it("can fetch from SPA with headless server", async () => {
+		const data = await selectElements(
+			"https://google.com",
+			"svg",
+			{source:'headless'}
+		);
+		expect(data.length).toBe(15);
+	});
 });
 describe("failings", () => {
 	it.each([
